@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\MyQuizz\Response as Response; // Importez la classe Response
+use app\quizz\model\Response; // Importez la classe Response
 
 class ResponseTest extends TestCase {
     public function test_1() {

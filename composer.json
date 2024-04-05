@@ -1,8 +1,9 @@
 {
-    "name": "yangfu/quizz",
+    "name": "yangfu/quizz1",
+    "description": "un quizz",
     "autoload": {
         "psr-4": {
-            "Yangfu\\Quizz\\": "src/"
+            "app\\quizz\\model\\": "src/model/"
         }
     },
     "authors": [

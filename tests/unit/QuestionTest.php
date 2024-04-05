@@ -1,7 +1,7 @@
 <?php
 
 use PHPUnit\Framework\TestCase;
-use App\MyQuizz\Question as Question; // Importez la classe Question
+use app\quizz\model\Question ; // Importez la classe Question
 
 class QuestionTest extends TestCase {
     public function test_1() {
