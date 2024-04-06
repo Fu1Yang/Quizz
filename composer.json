@@ -1,5 +1,5 @@
 {
-    "name": "yangfu/quizz1",
+    "name": "yangfu/quizz",
     "description": "un quizz",
     "autoload": {
         "psr-4": {

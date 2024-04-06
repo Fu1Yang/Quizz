@@ -1,24 +1,20 @@
 version: '1.0'
 services:
-  web:
+  webservice:
+    container_name: 'PHP-SERVER'
     build: './build/php/'
-    ports:
-      - "80:80"
     volumes:
-      - ~/Quizz:/var/www/html
-    links:
-      - db:db
-  db:
-    build: './build/mysql/'
-    volumes:
-      - ~/.docker/mysql:/var/lib/mysql
+      - .:/var/www/html
     ports:
-      - "3306:3306"
+      - 80:80
+    depends_on:
+      - mysql-srv  
+  mysql-srv:
+    image: mysql:8.3
     environment:
-      - MYSQL_ROOT_PASSWORD=thisisapassworddamned
-  myadmin:
-    image: phpmyadmin/phpmyadmin
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: test_database
+      MYSQL_USE: db_user
+      MYSQL_PASSWORD: password
     ports:
-      - "8080:80"
-    links:
-      - db:db
+      - "3306:3306"  

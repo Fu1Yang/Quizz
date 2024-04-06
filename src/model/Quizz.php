@@ -29,14 +29,14 @@ class Quizz
     }
     public static function create($pJsonObject): Quizz {
  
-        // $quizzTitle = $pJsonObject->title ;
-        // $quizz = new Quizz($quizzTitle);
+        $quizzTitle = $pJsonObject->title ;
+        $quizz = new Quizz($quizzTitle);
 
-        // // foreach ($pJsonObject->questions as $questionData) {
-        // //     $questionText = $questionData['text'] ;
-        // //     $question = new Question($questionText);
-        // // }
-        // // return $quizz;
+        foreach ($pJsonObject["questions"] as $questionData) {
+            $questionText = $questionData['text'] ;
+            $question = new Question($questionText);
+        }
+        return $quizz;
 
 
     }
